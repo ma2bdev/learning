@@ -1,0 +1,72 @@
+  @import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+  body{
+    font-family: 'Macondo', cursive;
+    background-color: #22313f;
+  }
+
+
+.title {
+    color: coral;
+    font-size: 48px;
+}
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tarjetas{
+    display: flex;
+    gap: 5px;
+}
+.subtitulo{
+    font-size: 24px;
+    color: #e4f1fe;
+}
+.tarjeta_personaje{
+    width: 120px;
+    height: 175px;
+    background-color: #f8fbfd;
+    padding: 10px;
+    box-sizing: border-box; 
+    margin: 5px;
+    border: 3px solid #315cfd;
+    border-radius: 15px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tarjeta_personaje:hover{
+    background: #315cfd;
+    color: white;
+    font-size: 1.5em;
+}
+.tarjeta_personaje img{
+    width: 60px;
+}
+input{
+    display: none;
+}
+
+
+
+button {
+    width: 100px;
+    height: 40px;
+    border: 2px solid #315cfd;
+    margin-top: 20px;
+    border-radius: 30px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+
+
+  }
+  
+  button:hover {
+    background: #315cfd;
+    color: white;
+    font-size: 1em;
+  }

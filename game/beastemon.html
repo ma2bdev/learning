@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beastémon</title>
+    <script src="./js/game.js">    </script>
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+    <section id="seleccionar-mascota">
+        <h1 class="title">BEASTÉMON</h1>
+
+        <h2 class="subtitulo">Elige un Personaje:</h2>
+        <div class="tarjetas">
+            <label class="tarjeta_personaje" for="Terraflare">
+                <p>Terraflare</p>
+                <img src="./img/terraflare.png" alt="Terraflare">
+            </label>
+            <input type="radio" name="mascota" id="Terraflare"/>
+    
+            <label class="tarjeta_personaje" for="Pyroaegis">
+                    <p>Pyroaegis</p>
+                    <img src="./img/pyroaegis.png" alt="Pyroaegis">
+            </label>
+            <input type="radio" name="mascota" id="Pyroaegis"/>
+    
+            <label class="tarjeta_personaje" for="Aquastorm">
+                <p>Aquastorm</p>
+                <img src="./img/aquastorm.png" alt="Aquastorm">
+            </label>
+            <input type="radio" name="mascota" id="Aquastorm"/>
+        </div>
+
+            <button id="select-mascota">Continuar</button>
+    </section>
+    <section id="seleccionar-ataque">
+        <h1 class="title">BEASTÉMON</h1>
+        <p><span id="mascota_jugador"></span> tiene <span id="vidas_jugador">3</span> vidas </p>
+        <p><span id="mascota_contrincante"></span> tiene <span id="vidas_pc">3</span> vidas</p>
+        <h2>Selecciona tu ataque:</h2>
+        <p>
+            <button id="fuego" class="button-62" role="button">Fuego 🔥</button>
+            <button id="agua" class="button-62" role="button">Agua  🌊</button>
+            <button id="tierra" class="button-62" role="button">Tierra  🌏</button>
+        </p>
+    </section>
+
+    <section id="mensajes">
+
+
+    </section>
+
+    <section id="reiniciar">
+        <button id="btn_reiniciar">Nuevo Combate</button>
+    </section>
+
+</body>
+</html>
