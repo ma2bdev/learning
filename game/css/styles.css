@@ -50,7 +50,9 @@ input{
     display: none;
 }
 
-
+p{
+    color: #f8fbfd;
+}
 
 button {
     width: 100px;
