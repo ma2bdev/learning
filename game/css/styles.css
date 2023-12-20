@@ -15,18 +15,23 @@
     justify-content: center;
     align-items: center;
 }
-.tarjetas{
+.tarjetas, .botones_poder {
     display: flex;
     gap: 5px;
+    color: #315cfd;
 }
 .subtitulo{
     font-size: 24px;
     color: #e4f1fe;
 }
+.nombre{
+    color: black;
+}
 .tarjeta_personaje{
     width: 120px;
     height: 175px;
-    background-color: #f8fbfd;
+    background-color:  #34495e;
+    color: white;
     padding: 10px;
     box-sizing: border-box; 
     margin: 5px;
@@ -39,36 +44,95 @@
     align-items: center;
 }
 .tarjeta_personaje:hover{
-    background: #315cfd;
+    background: #8dc6ff;
     color: white;
     font-size: 1.5em;
 }
+
 .tarjeta_personaje img{
     width: 60px;
 }
-input{
+input {
     display: none;
 }
-
-p{
-    color: wheat;
+input:checked + label {
+    background: #e4f1fe;
+    color: white;
+    font-size: 1.5em;
 }
 
-button {
-    width: 100px;
+.button-ataque {
+    width: 130px;
     height: 40px;
+    padding: auto;
     border: 2px solid #315cfd;
     margin-top: 20px;
-    border-radius: 30px;
+    border-radius: 15px;
     transition: all 0.3s;
     cursor: pointer;
     background: white;
-
-
   }
   
-  button:hover {
+  .button-ataque:hover {
     background: #315cfd;
     color: white;
     font-size: 1em;
   }
+  .btn_reiniciar {
+    width: 150px;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #2ba8fb;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  .btn_reiniciar:hover {
+    background-color: #6fc5ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+  }
+
+  #seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+  }
+#mensajes{
+    width: 280px;
+    background-color: #34495e;
+    color: white;
+    font-size: large;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+.grilla{
+    background-color: #34495e;
+    margin-top: 10px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    color: white;
+    }
+.ficha_jugador, .ficha_enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 15px;
+}
+.vidas {
+    color: #2ba8fb;
+    font-size: 36px;
+}
+
+@media (max-width: 360px) {
+    .tarjetas, .botones_poder {
+        flex-direction: column;
+    }
+}

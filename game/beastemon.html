@@ -15,46 +15,54 @@
         <h2 class="subtitulo">Elige un Personaje:</h2>
         <p>Para iniciar debes seleccionar un personaje!</p>
         <div class="tarjetas">
+            <input type="radio" name="mascota" id="Terraflare" class="seleccion"/>
             <label class="tarjeta_personaje" for="Terraflare">
-                <p>Terraflare</p>
+                <p class="nombre">Terraflare</p>
                 <img src="./img/terraflare.png" alt="Terraflare">
             </label>
-            <input type="radio" name="mascota" id="Terraflare"/>
-    
+
+            <input type="radio" name="mascota" id="Pyroaegis"/>
             <label class="tarjeta_personaje" for="Pyroaegis">
-                    <p>Pyroaegis</p>
+                    <p class="nombre">Pyroaegis</p>
                     <img src="./img/pyroaegis.png" alt="Pyroaegis">
             </label>
-            <input type="radio" name="mascota" id="Pyroaegis"/>
-    
+
+            <input type="radio" name="mascota" id="Aquastorm"/>
             <label class="tarjeta_personaje" for="Aquastorm">
-                <p>Aquastorm</p>
+                <p class="nombre">Aquastorm</p>
                 <img src="./img/aquastorm.png" alt="Aquastorm">
             </label>
-            <input type="radio" name="mascota" id="Aquastorm"/>
         </div>
 
-            <button id="select-mascota">Continuar</button>
+            <button id="select-mascota" class="btn_reiniciar">Continuar</button>
     </section>
     <section id="seleccionar-ataque">
         <h1 class="title">BEASTÉMON</h1>
-        <p><span id="mascota_jugador"></span> tiene <span id="vidas_jugador">3</span> vidas </p>
-        <p><span id="mascota_contrincante"></span> tiene <span id="vidas_pc">3</span> vidas</p>
-        <h2>Selecciona tu ataque:</h2>
-        <p>
-            <button id="fuego" class="button-62" role="button">Fuego 🔥</button>
-            <button id="agua" class="button-62" role="button">Agua  🌊</button>
-            <button id="tierra" class="button-62" role="button">Tierra  🌏</button>
-        </p>
-    </section>
+        <h2 class="subtitulo">Selecciona tu ataque:</h2>
+         <div class="botones_poder">
+            <button id="fuego" class="button-ataque" role="button">Fuego 🔥</button>
+            <button id="agua" class="button-ataque" role="button">Agua  🌊</button>
+            <button id="tierra" class="button-ataque" role="button">Tierra  🌏</button>
+        </div>
 
-    <section id="mensajes">
-
-
-    </section>
-
-    <section id="reiniciar">
-        <button id="btn_reiniciar">Nuevo Combate</button>
+        <div id="mensajes">
+                <p id="resultado_msg">¡Inicia el juego - Suerte!</p>
+                <section id="reiniciar">
+                    <button id="btn_reiniciar" class="btn_reiniciar">Nuevo Combate</button>
+                </section>
+        </div>
+        <div class="grilla">
+            <div class="ficha_jugador">
+                <p id="mascota_jugador"></p>
+                <p id="vidas_jugador" class="vidas">3</p>
+                <div id="ataque_jug"></div>
+            </div>
+            <div class="ficha_enemigo">
+                <p id="mascota_contrincante"></p> 
+                <p id="vidas_pc" class="vidas">3</p>
+                <div id="ataque_ene"></div>
+            </div>
+        </div>
     </section>
 
 </body>

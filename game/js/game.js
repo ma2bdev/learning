@@ -37,7 +37,7 @@ function seleccionarMascota(){
     sect_pers.style.display = 'none'
     // Mostrar sección seleccionar ataque
     let sect_ataque = document.getElementById('seleccionar-ataque')
-    sect_ataque.style.display = 'block'
+    sect_ataque.style.display = 'flex'
  
     let terraflare = document.getElementById('Terraflare')
     let pyroaegis = document.getElementById('Pyroaegis')
@@ -60,17 +60,14 @@ function seleccionarMascota(){
     }
     eleccion_contrincante()
 }
-
 function ataqueFuego(){
     ataque = 'FUEGO'
     ataque_pc()
 }
-
 function ataqueAgua(){
     ataque = 'AGUA'
     ataque_pc()
 }
-
 function ataqueTierra(){
     ataque = 'TIERRA'
     ataque_pc()
@@ -94,7 +91,7 @@ function revisar_vidas(){
         combates_jugador ++
     }
     else if (vidas_jugador == 0){
-        msg_fincombate('Lo lamento Has Perdido el desafio!')
+        msg_fincombate('Lo Lamento Has Perdido el desafio!')
         combates_pc ++
     }
 }
@@ -129,16 +126,23 @@ function combate(){
     revisar_vidas()
 }
 function crear_mensaje(resultado){
-    let sectionmsg = document.getElementById('mensajes')
-    parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu personaje atacó con ' + ataque + ', el personaje de tu contrincante atacó con ' + ataqueenemigo + ' ' + resultado
-    sectionmsg.appendChild(parrafo)
+    let resultado_msg = document.getElementById('resultado_msg')
+    let ataque_jug = document.getElementById('ataque_jug')
+    let ataque_ene = document.getElementById('ataque_ene')
+
+    let notificacion = document.createElement('p')
+    let nuevo_ataque_jug = document.createElement('p')
+    let nuevo_ataque_ene = document.createElement('p')
+    resultado_msg.innerHTML = resultado
+    nuevo_ataque_jug.innerHTML = ataque
+    nuevo_ataque_ene.innerHTML = ataqueenemigo
+    ataque_jug.appendChild(nuevo_ataque_jug)
+    ataque_ene.appendChild(nuevo_ataque_ene)
 }
 function msg_fincombate(result_final){
-    let sectionmsg = document.getElementById('mensajes')
-    parrafo = document.createElement('p')
-    parrafo.innerHTML = result_final
-    sectionmsg.appendChild(parrafo)
+    // Crea el parrafo de mensaje final
+    let resultado_msg = document.getElementById('resultado_msg')
+    resultado_msg.innerHTML = result_final
     let btn_Fuego = document.getElementById('fuego')
     btn_Fuego.disabled = true
     let btn_Agua = document.getElementById('agua')
@@ -162,7 +166,7 @@ let span_maco_cont = document.getElementById('mascota_contrincante')
     else {
         span_maco_cont.innerHTML = " Aquastorm" 
     }
-
+    contrincante = enemigo
 }
 
 function nueva_partida(){
